@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-05-29T03:02:55 EDT" name="Default suite" finished-at="2023-05-29T03:03:04 EDT" duration-ms="8934">
+    <groups>
+    </groups>
+    <test started-at="2023-05-29T03:02:55 EDT" name="Default test" finished-at="2023-05-29T03:03:04 EDT" duration-ms="8934">
+      <class name="tek.api.sqa.tests.GetAllAccountTest">
+        <test-method is-config="true" signature="setupApiTest()[pri:0, instance:tek.api.sqa.tests.GetAllAccountTest@769a1df5]" started-at="2023-05-29T03:02:56 EDT" name="setupApiTest" finished-at="2023-05-29T03:02:56 EDT" duration-ms="376" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupApiTest -->
+        <test-method signature="getAllAccountTest()[pri:0, instance:tek.api.sqa.tests.GetAllAccountTest@769a1df5]" started-at="2023-05-29T03:02:56 EDT" name="getAllAccountTest" finished-at="2023-05-29T03:03:01 EDT" duration-ms="5043" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAllAccountTest -->
+      </class> <!-- tek.api.sqa.tests.GetAllAccountTest -->
+      <class name="tek.api.sqa.tests.SecurityTest">
+        <test-method signature="testGenerateToken()[pri:0, instance:tek.api.sqa.tests.SecurityTest@19b843ba]" started-at="2023-05-29T03:03:02 EDT" name="testGenerateToken" finished-at="2023-05-29T03:03:02 EDT" duration-ms="512" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGenerateToken -->
+        <test-method is-config="true" signature="setupApiTest()[pri:0, instance:tek.api.sqa.tests.SecurityTest@19b843ba]" started-at="2023-05-29T03:03:02 EDT" name="setupApiTest" finished-at="2023-05-29T03:03:02 EDT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupApiTest -->
+        <test-method signature="tokenWithInvalidDataTest(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tek.api.sqa.tests.SecurityTest@19b843ba]" started-at="2023-05-29T03:03:02 EDT" name="tokenWithInvalidDataTest" data-provider="invalidTokenData" finished-at="2023-05-29T03:03:03 EDT" duration-ms="359" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[WrongUser]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[tek_supervisor]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[User not found]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tokenWithInvalidDataTest -->
+        <test-method is-config="true" signature="setupApiTest()[pri:0, instance:tek.api.sqa.tests.SecurityTest@19b843ba]" started-at="2023-05-29T03:03:02 EDT" name="setupApiTest" finished-at="2023-05-29T03:03:02 EDT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupApiTest -->
+        <test-method is-config="true" signature="setupApiTest()[pri:0, instance:tek.api.sqa.tests.SecurityTest@19b843ba]" started-at="2023-05-29T03:03:03 EDT" name="setupApiTest" finished-at="2023-05-29T03:03:03 EDT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupApiTest -->
+        <test-method signature="tokenWithInvalidDataTest(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tek.api.sqa.tests.SecurityTest@19b843ba]" started-at="2023-05-29T03:03:03 EDT" name="tokenWithInvalidDataTest" data-provider="invalidTokenData" finished-at="2023-05-29T03:03:03 EDT" duration-ms="454" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[supervisor]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[WrongPassword]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Password Not Matched]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tokenWithInvalidDataTest -->
+      </class> <!-- tek.api.sqa.tests.SecurityTest -->
+      <class name="tek.api.sqa.tests.TokenVerifyTest">
+        <test-method signature="verifyValidToken()[pri:0, instance:tek.api.sqa.tests.TokenVerifyTest@163370c2]" started-at="2023-05-29T03:03:01 EDT" name="verifyValidToken" finished-at="2023-05-29T03:03:02 EDT" duration-ms="831" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyValidToken -->
+        <test-method is-config="true" signature="setupApiTest()[pri:0, instance:tek.api.sqa.tests.TokenVerifyTest@163370c2]" started-at="2023-05-29T03:03:01 EDT" name="setupApiTest" finished-at="2023-05-29T03:03:01 EDT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupApiTest -->
+      </class> <!-- tek.api.sqa.tests.TokenVerifyTest -->
+      <class name="tek.api.sqa.tests.GetAccountTest">
+        <test-method signature="getAccountWithExistingId()[pri:0, instance:tek.api.sqa.tests.GetAccountTest@471a9022]" started-at="2023-05-29T03:03:03 EDT" name="getAccountWithExistingId" finished-at="2023-05-29T03:03:04 EDT" duration-ms="1044" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAccountWithExistingId -->
+        <test-method is-config="true" signature="setupApiTest()[pri:0, instance:tek.api.sqa.tests.GetAccountTest@471a9022]" started-at="2023-05-29T03:03:03 EDT" name="setupApiTest" finished-at="2023-05-29T03:03:03 EDT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupApiTest -->
+      </class> <!-- tek.api.sqa.tests.GetAccountTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
