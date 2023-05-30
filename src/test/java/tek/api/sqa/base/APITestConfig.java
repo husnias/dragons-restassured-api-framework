@@ -18,7 +18,8 @@ import org.testng.annotations.Test;
 @Listeners({ExtentITestListenerAdapter.class})
 public class APITestConfig extends BaseConfig {
 
-    @BeforeMethod
+   
+	@BeforeMethod
     public void setupApiTest() {
     	//First step setup BaseURL to RestAssured
         System.out.println("Setting up Test");
@@ -37,4 +38,10 @@ Map<String, String> requestBody = new HashMap<>();
          String token = response.jsonPath().get("token");
         return token;
     }
+    public String getInvalidToken() {
+ 	   
+	    String invalidToken = "invalidToken";
+
+	    return invalidToken;
+	}
 }
