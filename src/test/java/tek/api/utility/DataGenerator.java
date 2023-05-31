@@ -1,9 +1,9 @@
 package tek.api.utility;
+import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import org.testng.annotations.Test;
-
+import java.text.ParseException;
 import com.github.javafaker.Faker;
 public class DataGenerator {
 	
@@ -35,10 +35,15 @@ public class DataGenerator {
 		return faker.job().position(); 
 	}
 	
-	public String getDateOfBirth() {
+	public Date getDateOfBirth() {
 		Date date = faker.date().birthday();
-		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
-		return formatter.format(date);
-	}
+		DateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+		String formattedDate = formatter.format(date);
+		try {
+			return formatter.parse(formattedDate);
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			throw new RuntimeException("Date Parse Exception ");
+		}
 }
-
+}
