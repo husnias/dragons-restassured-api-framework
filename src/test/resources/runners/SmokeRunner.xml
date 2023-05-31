@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Smoke test Suite">
+	<test name="Tek Insurance API Tests">
+		<classes>
+			<class name="tek.api.sqa.tests.SecurityTest"></class>
+			<class name="tek.api.sqa.tests.TokenVerifyTest"></class>
+		</classes>
+	</test>
+</suite>
