@@ -4,11 +4,13 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import com.github.javafaker.Faker;
-
+import java.text.ParseException;
+import com.github.javafaker.Faker;
 public class DataGenerator {
-	
+
 private Faker faker; 
 	
+
 	public DataGenerator() {
 		this.faker = new Faker();
 	}
@@ -45,6 +47,7 @@ private Faker faker;
 			// TODO Auto-generated catch block
 			throw new RuntimeException("Date Parse Exception ");
 		}
+
 	}
 }
 

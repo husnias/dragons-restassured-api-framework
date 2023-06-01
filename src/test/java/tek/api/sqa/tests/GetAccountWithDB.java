@@ -32,8 +32,8 @@ public class GetAccountWithDB extends DatabaseConfig {
 		ResultSet secondQueryResult = runQuery(secondQuery);
 		
 		//get response from json path as Object. 
-		PrimaryAccount responseBody = response.jsonPath()
-				.getObject("primaryPerson", PrimaryAccount.class);
+	 PrimaryAccount responseBody = response.jsonPath()
+			 .getObject("primaryPerson", PrimaryAccount.class);
 		
 		if (secondQueryResult.next()) {
 			String expectedEmail = secondQueryResult.getString("email");
@@ -43,9 +43,9 @@ public class GetAccountWithDB extends DatabaseConfig {
 		}else {
 			Assert.fail("Test Fail Second query did not return result for id " + queryResultId);
 		}
-		
-		//int actualPrimaryPersonId = response.jsonPath().get("primaryPerson.id");
-		//Assert.assertEquals(actualPrimaryPersonId, queryResultId);
+				
+		int actualPrimaryPersonId = response.jsonPath().get("primaryPerson.id");
+		Assert.assertEquals(actualPrimaryPersonId, queryResultId);
 	}
 
 	

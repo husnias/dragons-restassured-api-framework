@@ -1,4 +1,5 @@
 package tek.api.model;
+
 import java.util.Date;
 
 public class PrimaryAccount {

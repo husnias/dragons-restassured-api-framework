@@ -1,6 +1,5 @@
 package tek.api.sqa.base;
 
-import com.aventstack.extentreports.testng.listener.ExtentITestListenerAdapter;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
@@ -15,14 +14,16 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-@Listeners({ExtentITestListenerAdapter.class})
 public class APITestConfig extends BaseConfig {
 
-    @BeforeMethod
+   
+	@BeforeMethod
     public void setupApiTest() {
+    	//First step setup BaseURL to RestAssured
         System.out.println("Setting up Test");
         RestAssured.baseURI = getBaseUrl();
     }
+
     
     public String getValidToken() {
     	Map<String, String> requestBody = new HashMap<>();
@@ -36,4 +37,14 @@ public class APITestConfig extends BaseConfig {
 		String token = response.jsonPath().get("token");
 		return token;
     }
+
+    
+    
+    public String getInvalidToken() {
+ 	   
+	    String invalidToken = "invalidToken";
+
+	    return invalidToken;
+	}
+
 }
