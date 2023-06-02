@@ -1,13 +1,15 @@
 package tek.api.utility;
 import java.text.DateFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-
+import com.github.javafaker.Faker;
 import java.text.ParseException;
 import com.github.javafaker.Faker;
 public class DataGenerator {
+
+private Faker faker; 
 	
-	private Faker faker; 
 
 	public DataGenerator() {
 		this.faker = new Faker();
@@ -45,5 +47,7 @@ public class DataGenerator {
 			// TODO Auto-generated catch block
 			throw new RuntimeException("Date Parse Exception ");
 		}
+
+	}
 }
-}
+

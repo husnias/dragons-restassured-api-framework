@@ -3,12 +3,21 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
+<<<<<<< HEAD
+      <class name="tek.api.sqa.tests.HomeWorkAPITest">
+        <methods>
+          <include name="setupApiTest"/>
+          <include name="createAccountTestWithDBValidation"/>
+        </methods>
+      </class> <!-- tek.api.sqa.tests.HomeWorkAPITest -->
+=======
       <class name="tek.api.sqa.tests.InvalidTokenTest">
         <methods>
           <include name="setupApiTest"/>
           <include name="verifyInvalidToken"/>
         </methods>
       </class> <!-- tek.api.sqa.tests.InvalidTokenTest -->
+>>>>>>> 5a47135f510d31d2b5a600eb628e48073e84c597
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

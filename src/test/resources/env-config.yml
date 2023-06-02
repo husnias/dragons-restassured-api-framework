@@ -3,3 +3,10 @@ api:
   users:
     username: "supervisor"
     password: "tek_supervisor"
+    
+db:
+   db_url: "jdbc:mysql://tek-database-server.mysql.database.azure.com:3306/tek_insurance_app?useSSL=true&requireSSL=false"
+   port: "3306"
+   database_name: "tek_insurance_app"
+   username: "tek_student_user"
+   password: "MAY_2022"

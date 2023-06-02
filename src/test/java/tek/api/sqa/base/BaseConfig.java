@@ -33,4 +33,7 @@ public class BaseConfig {
         authUser.setPassword(userMap.get("password"));
     return authUser;
     }
+    public HashMap<String, String> getDatabaseProperties() {
+    	return (HashMap<String, String>) this.propertyReader.getProperty("db");
+    }
 }

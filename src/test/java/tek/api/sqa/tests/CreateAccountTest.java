@@ -1,8 +1,9 @@
 package tek.api.sqa.tests;
-
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import org.testng.Assert;
+import org.testng.annotations.Test;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
@@ -12,12 +13,16 @@ import tek.api.sqa.base.APITestConfig;
 import tek.api.utility.DataGenerator;
 import tek.api.utility.EndPoints;
 
-public class CreateAccountTest extends APITestConfig{
-	
+public class CreateAccountTest extends APITestConfig {
+
+
 	private DataGenerator data = new DataGenerator(); 
 	@Test
 	public void createAccountValidTest() {
+				
+
 		String validToken = getValidToken(); 
+
 		RequestSpecification request = RestAssured.given(); 
 		request.contentType(ContentType.JSON);
 		request.header("Authorization" , "Bearer " + validToken);
@@ -40,10 +45,18 @@ public class CreateAccountTest extends APITestConfig{
 				.post(EndPoints.ADD_PRIMARY_ACCOUNT.getValue());
 		response.prettyPrint();
 		Assert.assertEquals(response.getStatusCode(), 201);
+
+		PrimaryAccount responseBody = response.as(PrimaryAccount.class);
+		//String actualEmail = response.jsonPath().getString("email");
+		Assert.assertEquals(responseBody.getEmail(), requestBody.getEmail());
+	}
+
+
+
 		
-		String actualEmail = response.jsonPath().getString("email");
-		Assert.assertEquals(actualEmail, requestBody.getEmail());
+		//String actualEmail = response.jsonPath().getString("email");
+		//Assert.assertEquals(actualEmail, requestBody.getEmail());
 	}
 
 	
-}
+
